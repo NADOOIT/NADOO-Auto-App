@@ -201,15 +201,17 @@ class MentatApp(toga.App):
         os.environ[f"{self.selected_provider}_API_KEY"] = api_key
 
         
-        config = Config.create(Path(self.filepath).parent)
-        configs_path = Path.home() / ".mentat/configs.json"
-        config.model = configs_path["model"]
-        config.provider = configs_path["provider"]
+        config = Config()
+        config.model = self.selected_model
+        config.provider = self.selected_provider
+        print(
+            config.model,
+            config.provider
+            )
 
         self.python_client = PythonClient(
             cwd=Path(self.filepath).parent,
             paths=[self.filepath],
-            maximum_context = 3000,
             config=config,
         )
 
