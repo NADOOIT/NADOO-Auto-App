@@ -1,8 +1,9 @@
 # NADOO-Auto-App
 
 ## Overview
-Nadoo_Auto_App is a Toga-based application designed to interact with the Mentat AI Library. 
-It allows users to select files or directories, initialize the Mentat client, and engage in a chat with the Mentat AI. 
+Nadoo_Auto_App is a Toga-based application designed to interact with various AI APIs, 
+including Anthropic and OpenAI, using the Mentat AI Library. It allows users to select files or directories,
+initialize the Mentat client, and engage in a chat with the Mentat library. 
 The application also provides a settings interface to configure API keys and models.
 
 ```
